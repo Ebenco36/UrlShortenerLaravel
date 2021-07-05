@@ -44,10 +44,13 @@ class ShortCodeRepository implements ShortCodeRepositoryInterface{
     }
 
     public function get($code){
-        return Shortener::where('short_code', $code)
-            ->first()
-            ->map
-            ->format();
+        $find = Shortener::where('short_code', $code)
+        ->first();
+        if($find){
+            return $find;
+        }else{
+            return response()->json(['message' => "Not found"], 404);
+        }
     }
 
     function generateUniqueCode() {

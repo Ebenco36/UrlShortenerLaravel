@@ -16,11 +16,11 @@ This is a node js app built by Awotoro Ebenezer Oladimeji to help reduce long ur
 > php artisan migrate
 - Start your application using php artisan serve --port=5000. This server will run on port 5000 as specified.
 > php artisan serve --port=5000 
-- Application runs on port 5000 visit http://localhost:5000/api/url_shortner
+- Application runs on port 5000 visit http://localhost:5000/api/decode_urls
 
 ## Endpoints available
-- Visit http://localhost:5000/api/url_shortner to get the list of url.
-- Make a post request http://localhost:5000/api/url_shortner to create or generate a short code urls.
+- Visit http://localhost:5000/api/decode_urls to get the list of url.
+- Make a post request http://localhost:5000/api/encode to create or generate a short code urls.
 > data required for the post endpoint 
 ```json
 {
@@ -28,4 +28,6 @@ This is a node js app built by Awotoro Ebenezer Oladimeji to help reduce long ur
 }
 ```
 - View page using endpoint http://localhost:5000/api/:code which redirects user to real page.
+
+- Statistics endpoint http://localhost:5000/api/statistics/:code to view json data.
 

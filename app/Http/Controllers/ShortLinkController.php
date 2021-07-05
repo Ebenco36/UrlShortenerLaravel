@@ -44,4 +44,10 @@ class ShortLinkController extends Controller
         $find = $this->short_link->get($code);
         return redirect($find->long_url);
     }
+
+    public function statistics($code)
+    {
+        $find = $this->short_link->get($code);
+        return response()->json(['success' => 'Shorten Link Generated Successfully!', "data" => $find]);
+    }
 }
