@@ -12,6 +12,8 @@ This is a node js app built by Awotoro Ebenezer Oladimeji to help reduce long ur
 - Download git repository content or pull from the git repository.
 - Run composer install to install all packages required for the application.
 > composer install
+- Run php artisan migrate to migrate our model to the database using the ORM standard
+> php artisan migrate
 - Start your application using php artisan serve --port=5000. This server will run on port 5000 as specified.
 > php artisan serve --port=5000 
 - Application runs on port 5000 visit http://localhost:5000/api/url_shortner
