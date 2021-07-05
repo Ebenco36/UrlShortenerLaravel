@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('generate-shorten-link', ShortLinkController::class.'@index');
-Route::post('generate-shorten-link', ShortLinkController::class.'@store')->name('generate.shorten.link.post');
+Route::get('url_shortner', ShortLinkController::class.'@index');
+Route::post('url_shortner', ShortLinkController::class.'@store')->name('generate.shorten.link.post');
    
 Route::get('{code}', ShortLinkController::class.'@shortenLink')->name('shorten.link');
